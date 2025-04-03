@@ -4,8 +4,23 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  --duration: 1.5s;
+  --pulse-color: oklch(0.723 0.219 149.579);
+
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --animate-pulse: pulse var(--duration) ease-out infinite;
+
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 var(--pulse-color);
+    }
+    50% {
+      box-shadow: 0 0 0 8px var(--pulse-color);
+    }
+  }
+
 }
 
 :root {
