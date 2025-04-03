@@ -3,11 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import { AtomIcon, HomeIcon, MegaphoneIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "../lib/utils";
-import { PulsatingButton } from "./animations/magicUI/PulsatingButton";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   const pathname = usePathname();
@@ -88,11 +87,18 @@ const Header = () => {
         </div>
 
         {/* User/Auth */}
-        <div className="cursor-pointer rounded-lg bg-gradient-to-r from-green-400 via-emerald-200 to-yellow-200 p-[2px]">
-          <button className="h-full w-full rounded-md bg-gray-900 px-4 py-2 text-white">
-            Register
-          </button>
-        </div>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <SignInButton mode="modal">
+            <div className="cursor-pointer rounded-lg bg-gradient-to-r from-green-400 via-emerald-200 to-yellow-200 p-[2px]">
+              <button className="h-full w-full rounded-md bg-gray-900 px-4 py-2 text-white">
+                Register
+              </button>
+            </div>
+          </SignInButton>
+        </SignedOut>
       </div>
     </header>
   );
