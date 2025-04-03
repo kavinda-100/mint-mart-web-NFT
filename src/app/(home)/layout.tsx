@@ -5,7 +5,7 @@ const HomeLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <main className={"container mx-auto flex flex-col"}>
       <Header />
-      <section className={"mt-[40px] flex w-full flex-1"}>{children}</section>
+      <section className={"mt-[40px] min-h-screen w-full"}>{children}</section>
     </main>
   );
 };
