@@ -88,8 +88,10 @@ const Header = () => {
         </div>
 
         {/* User/Auth */}
-        <div className="rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-200 to-yellow-200 p-[2px]">
-          <Button variant={"outline"}>Register</Button>
+        <div className="cursor-pointer rounded-lg bg-gradient-to-r from-green-400 via-emerald-200 to-yellow-200 p-[2px]">
+          <button className="h-full w-full rounded-md bg-gray-900 px-4 py-2 text-white">
+            Register
+          </button>
         </div>
       </div>
     </header>
