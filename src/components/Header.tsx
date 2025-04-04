@@ -47,8 +47,8 @@ const Header = () => {
         <div className={"hidden items-center gap-10 lg:flex"}>
           <Link
             href={"/"}
-            className={cn("flex items-center gap-2 text-lg font-bold", {
-              "logo-text": pathname === "/",
+            className={cn("flex items-center gap-2 text-base font-bold", {
+              "header-text": pathname === "/",
             })}
           >
             <HomeIcon
@@ -60,8 +60,8 @@ const Header = () => {
           </Link>
           <Link
             href={"/about"}
-            className={cn("flex items-center gap-2 text-lg font-bold", {
-              "logo-text": pathname === "/about",
+            className={cn("flex items-center gap-2 text-base font-bold", {
+              "header-text": pathname === "/about",
             })}
           >
             <MegaphoneIcon
@@ -73,8 +73,8 @@ const Header = () => {
           </Link>
           <Link
             href={"/browse"}
-            className={cn("flex items-center gap-2 text-lg font-bold", {
-              "logo-text": pathname === "/browse",
+            className={cn("flex items-center gap-2 text-base font-bold", {
+              "header-text": pathname === "/browse",
             })}
           >
             <AtomIcon
