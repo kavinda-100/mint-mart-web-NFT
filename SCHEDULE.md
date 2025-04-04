@@ -1,3 +1,5 @@
 ### Left to do
-- [ ] create user table
-- [ ] create webhook route for clerk
+- [x] Header/Nav Bar
+- [x] create user table
+- [x] create webhook route for clerk
+- [ ] home Page
