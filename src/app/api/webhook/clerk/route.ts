@@ -1,6 +1,9 @@
 import { Webhook } from "svix";
 import { headers } from "next/headers";
 import type { WebhookEvent } from "@clerk/nextjs/server";
+import { db } from "../../../../server/db";
+import { users } from "../../../../server/db/schema";
+import { eq } from "drizzle-orm";
 
 export async function POST(req: Request) {
   const SIGNING_SECRET = process.env.CLERK_WEBHOOK_SIGNING_SECRET;
@@ -53,6 +56,62 @@ export async function POST(req: Request) {
   const eventType = evt.type;
   console.log(`Received webhook with ID ${id} and event type of ${eventType}`);
   console.log("Webhook payload:", body);
+
+  if (evt.type === "user.created") {
+    const clerkData = evt.data;
+    const email = clerkData?.email_addresses[0]?.email_address;
+    const clerkId = clerkData.id;
+
+    if (email && clerkId) {
+      await db.insert(users).values({
+        clerkId,
+        fullName: `${clerkData.first_name} ${clerkData.last_name}`,
+        email,
+        profileImageUrl: clerkData.image_url,
+      });
+    } else {
+      console.error("Error: Missing required user data");
+      return new Response("Error: Missing required user data", {
+        status: 400,
+      });
+    }
+  }
+
+  if (evt.type === "user.updated") {
+    const clerkData = evt.data;
+    const email = clerkData?.email_addresses[0]?.email_address;
+    const clerkId = clerkData.id;
+
+    if (email && clerkId) {
+      await db
+        .update(users)
+        .set({
+          fullName: `${clerkData.first_name} ${clerkData.last_name}`,
+          email,
+          profileImageUrl: clerkData.image_url,
+        })
+        .where(eq(users.clerkId, clerkId));
+    } else {
+      console.error("Error: Missing required user data");
+      return new Response("Error: Missing required user data", {
+        status: 400,
+      });
+    }
+  }
+
+  if (eventType === "user.deleted") {
+    const data = evt.data;
+
+    if (!data.id) {
+      console.error("Error: Missing required user data");
+      return new Response("Error: Missing required user data", {
+        status: 400,
+      });
+    }
+
+    await db.delete(users).where(eq(users.clerkId, data.id));
+    console.log("User deleted");
+  }
 
   return new Response("Webhook received", { status: 200 });
 }
