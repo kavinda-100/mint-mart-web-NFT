@@ -92,10 +92,10 @@ const Header = () => {
         </SignedIn>
         <SignedOut>
           <SignInButton mode="modal">
-            <div className="cursor-pointer rounded-lg bg-gradient-to-r from-green-400 via-emerald-200 to-yellow-200 p-[2px]">
-              <button className="h-full w-full rounded-md bg-gray-900 px-4 py-2 text-white">
+            <div className="cursor-pointer rounded-lg bg-gradient-to-r from-green-400 via-emerald-200 to-yellow-200 p-1">
+              <div className="h-full w-full cursor-pointer rounded-md bg-gray-900 px-3 py-2 text-white">
                 Register
-              </button>
+              </div>
             </div>
           </SignInButton>
         </SignedOut>
