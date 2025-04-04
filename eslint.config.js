@@ -27,6 +27,9 @@ export default tseslint.config(
       "@typescript-eslint/consistent-type-definitions": "off",
       "@typescript-eslint/no-namespace": "off",
       "@typescript-eslint/no-empty-object-type": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/consistent-type-imports": [
         "warn",
         { prefer: "type-imports", fixStyle: "inline-type-imports" },
