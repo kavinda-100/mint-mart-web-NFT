@@ -33,7 +33,12 @@ const MainHeroSection = () => {
           "col-span-3 flex h-full w-full flex-col items-center justify-center px-2 lg:col-span-2 lg:ml-5 lg:px-0"
         }
       >
-        <h1 className={"text-7xl font-extrabold text-pretty lg:text-9xl"}>
+        <h1
+          className={
+            "flex flex-col gap-5 text-7xl font-extrabold text-pretty lg:text-9xl"
+          }
+        >
+          <div className={"h-2 w-full bg-white"} />
           Start Making Money With NFT&apos;s{" "}
           <div className={"h-2 w-full bg-white"} />
         </h1>
