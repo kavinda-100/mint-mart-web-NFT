@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "../../components/ui/button";
+import Link from "next/link";
 
 const MainHeroSection = () => {
   return (
@@ -13,19 +14,19 @@ const MainHeroSection = () => {
           width={400}
           height={400}
         />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-          tristique, nunc ut bibendum tincidunt, nisi nunc aliquet nunc, eget
-          aliquam nunc nunc eget nunc. Sed tristique, nunc ut bibendum
-          tincidunt, nisi nunc aliquet nunc, eget aliquam nunc nunc eget nunc.
+        <p className={"text-base font-bold text-pretty"}>
+          Welcome to the future of digital ownership! Our NFT marketplace is the
+          ultimate destination for creators, collectors, and investors.
         </p>
-        <Button variant={"gradient"}>Buy Now</Button>
+        <Button variant={"gradient"} asChild>
+          <Link href={"/browse"}>Buy Now</Link>
+        </Button>
       </div>
 
       {/* section two */}
       <div
         className={
-          "col-span-3 flex h-full w-full flex-col items-center justify-center lg:col-span-2"
+          "col-span-3 flex h-full w-full flex-col items-center justify-center lg:col-span-2 lg:ml-5"
         }
       >
         <h1 className={"text-4xl font-extrabold text-pretty lg:text-9xl"}>

@@ -69,7 +69,7 @@ const Header = () => {
                 "text-primary": pathname === "/about",
               })}
             />
-            Home
+            About
           </Link>
           <Link
             href={"/browse"}
@@ -82,7 +82,7 @@ const Header = () => {
                 "text-primary": pathname === "/browse",
               })}
             />
-            Home
+            Browse
           </Link>
         </div>
 
