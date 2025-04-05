@@ -2,22 +2,43 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "../../components/ui/button";
 import Link from "next/link";
+import { AtomIcon } from "lucide-react";
 
 const SecondHeroSection = () => {
   return (
-    <div className={"container mx-auto grid h-screen grid-cols-3 gap-5"}>
+    <div
+      className={"container mx-auto grid h-screen grid-cols-3 gap-5 bg-black"}
+    >
       {/* section one */}
       <div
         className={
-          "col-span-3 flex h-full w-full flex-col items-center justify-center px-2 lg:col-span-2 lg:px-0"
+          "col-span-3 flex h-full w-full flex-col gap-10 px-2 lg:col-span-2 lg:px-0"
         }
       >
-        <p className={"text-base font-bold text-pretty lg:mb-3"}>
-          Welcome to the future of digital ownership! Our NFT marketplace is the
-          ultimate destination for creators, collectors, and investors.
+        <h1 className={"text-4xl font-extrabold text-pretty lg:text-[80px]"}>
+          Game Changers for Online Investment Strategy Of NFTs
+        </h1>
+
+        <p
+          className={
+            "text-muted-foreground text-base font-medium text-pretty lg:mb-3"
+          }
+        >
+          Join our community of passionate NFT enthusiasts and discover the
+          limitless possibilities of digital ownership. Whether you&#39;re an
+          artist looking to showcase your work or a collector seeking rare
+          treasures, our platform provides the tools and resources you need to
+          thrive in the NFT space. Experience seamless transactions, robust
+          security, and a vibrant marketplace that connects you with like-minded
+          individuals. Don&#39;t miss out on the opportunity to be part of this
+          exciting revolution. Sign up now and unlock a world of creativity and
+          investment potential!
         </p>
-        <Button variant={"gradient"} asChild>
-          <Link href={"/browse"}>Buy Now</Link>
+        <Button variant={"gradient"} asChild className={"w-1/2 lg:w-1/3"}>
+          <Link href={"/browse"} className={"flex items-center gap-3"}>
+            <AtomIcon className={"size-5"} />
+            Explore NFTs
+          </Link>
         </Button>
       </div>
 
