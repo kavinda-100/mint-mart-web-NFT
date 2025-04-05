@@ -10,7 +10,7 @@ import {
 
 const FaqSection = () => {
   return (
-    <div className={"container mx-auto mt-5 grid grid-cols-5"}>
+    <div className={"container mx-auto my-10 grid grid-cols-5"}>
       {/*  section one */}
       <div
         className={"col-span-5 flex flex-col gap-6 px-2 lg:col-span-2 lg:px-0"}
