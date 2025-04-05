@@ -1,10 +1,9 @@
-import { Button } from "../../components/ui/button";
+import MainHeroSection from "../../sections/hero/MainHeroSection";
 
 export default function HomePage() {
   return (
-    <section>
-      <h1 className={"text-center text-3xl font-bold"}>Mint Mart</h1>
-      <Button>Go to Marketplace</Button>
+    <section className={"container mx-auto"}>
+      <MainHeroSection />
     </section>
   );
 }
