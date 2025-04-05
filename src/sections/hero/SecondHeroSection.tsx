@@ -7,7 +7,9 @@ import { AtomIcon } from "lucide-react";
 const SecondHeroSection = () => {
   return (
     <div
-      className={"container mx-auto grid h-screen grid-cols-3 gap-5 bg-black"}
+      className={
+        "container mx-auto grid h-screen grid-cols-3 gap-5 bg-[#1C1C1E]"
+      }
     >
       {/* section one */}
       <div
