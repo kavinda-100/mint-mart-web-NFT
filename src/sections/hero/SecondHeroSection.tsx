@@ -14,7 +14,7 @@ const SecondHeroSection = () => {
       {/* section one */}
       <div
         className={
-          "col-span-3 flex h-full w-full flex-col gap-10 px-2 lg:col-span-2 lg:px-0"
+          "col-span-3 flex h-full w-full flex-col gap-10 px-2 py-5 lg:col-span-2 lg:px-5 lg:py-5"
         }
       >
         <h1 className={"text-4xl font-extrabold text-pretty lg:text-[80px]"}>
@@ -47,7 +47,7 @@ const SecondHeroSection = () => {
       {/* section two */}
       <div
         className={
-          "col-span-3 gap-4 bg-blue-400 px-2 lg:col-span-1 lg:ml-5 lg:px-0"
+          "col-span-3 gap-4 bg-green-400 px-2 lg:col-span-1 lg:ml-5 lg:px-0"
         }
       >
         <Image

@@ -3,7 +3,7 @@ import SecondHeroSection from "../../sections/hero/SecondHeroSection";
 
 export default function HomePage() {
   return (
-    <section className={"container mx-auto"}>
+    <section className={"flex w-full flex-col gap-10 lg:gap-5"}>
       {/*  Hero section */}
       <MainHeroSection />
       <SecondHeroSection />

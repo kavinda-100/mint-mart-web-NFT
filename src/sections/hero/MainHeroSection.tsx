@@ -5,7 +5,9 @@ import Link from "next/link";
 
 const MainHeroSection = () => {
   return (
-    <div className={"container mx-auto grid h-screen grid-cols-3 gap-5"}>
+    <div
+      className={"container mx-auto grid h-screen grid-cols-3 gap-5 bg-black"}
+    >
       {/* section one */}
       <div
         className={"col-span-3 flex flex-col gap-4 px-2 lg:col-span-1 lg:px-0"}
