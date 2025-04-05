@@ -3,4 +3,5 @@
 - [x] create user table
 - [x] create webhook route for clerk
 - [x] home Page
+- [ ] home page smoke effect
 - [ ] home Page Feature section

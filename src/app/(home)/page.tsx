@@ -8,8 +8,8 @@ import SmokeCursor from "../../components/animations/SmokeCursor";
 export default function HomePage() {
   return (
     <section className={"flex w-full flex-col gap-10 lg:gap-5"}>
-      {/*<SplashCursor />*/}
-      <SmokeCursor /> {/* Add the SmokeCursor component here */}
+      {/* Add the SmokeCursor component here */}
+      <SmokeCursor />
       {/*  Hero section */}
       <MainHeroSection />
       <SecondHeroSection />
