@@ -11,6 +11,8 @@ export default function HomePage() {
 
       {/*  FAQ section */}
       <FaqSection />
+
+      {/*    Banner section */}
     </section>
   );
 }
