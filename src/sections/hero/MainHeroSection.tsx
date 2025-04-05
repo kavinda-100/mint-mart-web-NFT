@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "../../components/ui/button";
 import Link from "next/link";
+import { SparklesText } from "../../components/animations/magicUI/SparklesText";
 
 const MainHeroSection = () => {
   return (
@@ -39,7 +40,11 @@ const MainHeroSection = () => {
           }
         >
           <div className={"h-2 w-full bg-white"} />
-          Start Making Money With NFT&apos;s{" "}
+          Start Making Money With{" "}
+          <SparklesText
+            text={"NFTs"}
+            textClassName={"text-7xl font-extrabold lg:text-9xl"}
+          />
           <div className={"h-2 w-full bg-white"} />
         </h1>
       </div>
