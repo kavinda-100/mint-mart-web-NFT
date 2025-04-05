@@ -1,10 +1,10 @@
 import React from "react";
+import Image from "next/image";
 
 const BannerSection = () => {
   return (
     <div className={"container mx-auto my-10"}>
       <div className={"w-full rounded-r-full bg-green-400 p-5"}>
-        {/* first */}
         <div className={"flex w-1/2 flex-col gap-4"}>
           <h1
             className={
@@ -33,7 +33,13 @@ const BannerSection = () => {
             <span className={"font-medium text-black"}>Join Now</span>
           </div>
         </div>
-        {/* second */}
+
+        <Image
+          src={"/banner.png"}
+          alt={"banner-image"}
+          width={400}
+          height={400}
+        />
       </div>
     </div>
   );
