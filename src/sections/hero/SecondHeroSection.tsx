@@ -9,7 +9,7 @@ const SecondHeroSection = () => {
       {/* section one */}
       <div
         className={
-          "col-span-3 flex h-full w-full flex-col items-center justify-center px-2 lg:col-span-2 lg:ml-5 lg:px-0"
+          "col-span-3 flex h-full w-full flex-col items-center justify-center px-2 lg:col-span-2 lg:px-0"
         }
       >
         <p className={"text-base font-bold text-pretty lg:mb-3"}>
@@ -22,12 +22,17 @@ const SecondHeroSection = () => {
       </div>
 
       {/* section two */}
-      <div className={"col-span-3 gap-4 px-2 lg:col-span-1 lg:px-0"}>
+      <div
+        className={
+          "col-span-3 gap-4 bg-blue-400 px-2 lg:col-span-1 lg:ml-5 lg:px-0"
+        }
+      >
         <Image
-          src={"/hero-one.png"}
-          alt={"NFT Image"}
-          fill={true}
-          className={"h-full w-full object-cover object-center"}
+          src={"/hero-two.png"}
+          alt={"NFT Image two"}
+          width={800}
+          height={800}
+          className={"rounded-lg object-cover lg:h-full lg:w-full"}
         />
       </div>
     </div>
