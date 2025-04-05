@@ -1,5 +1,6 @@
 import MainHeroSection from "../../sections/hero/MainHeroSection";
 import SecondHeroSection from "../../sections/hero/SecondHeroSection";
+import FaqSection from "../../sections/FAQ/FAQSection";
 
 export default function HomePage() {
   return (
@@ -7,6 +8,9 @@ export default function HomePage() {
       {/*  Hero section */}
       <MainHeroSection />
       <SecondHeroSection />
+
+      {/*  FAQ section */}
+      <FaqSection />
     </section>
   );
 }
