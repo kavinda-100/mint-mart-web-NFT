@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { BorderBeam } from "../../components/animations/magicUI/BorderBeam";
 
 const BannerSection = () => {
   return (
@@ -32,20 +31,10 @@ const BannerSection = () => {
 
           <div
             className={
-              "relative w-fit cursor-pointer overflow-hidden rounded-lg px-6 py-3"
+              "w-fit cursor-pointer rounded-lg border border-gray-700 px-6 py-3"
             }
           >
             <span className={"font-medium text-black"}>Join Now</span>
-            <BorderBeam
-              size={1000}
-              initialOffset={20}
-              className="from-black via-yellow-500 to-green-400"
-              transition={{
-                type: "spring",
-                stiffness: 60,
-                damping: 20,
-              }}
-            />
           </div>
         </div>
 
