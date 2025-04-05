@@ -100,6 +100,28 @@ const FaqSection = () => {
               verifiable.
             </AccordionContent>
           </AccordionItem>
+
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="text-lg font-semibold text-green-600">
+              Can I resell my NFT after purchasing?
+            </AccordionTrigger>
+            <AccordionContent className="text-muted-foreground text-sm">
+              Yes! Once you purchase an NFT, it’s yours to keep, sell, or trade.
+              You can list it back on our marketplace or transfer it to another
+              wallet anytime.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-7">
+            <AccordionTrigger className="text-lg font-semibold text-green-600">
+              What makes NFTs valuable?
+            </AccordionTrigger>
+            <AccordionContent className="text-muted-foreground text-sm">
+              NFTs derive their value from uniqueness, ownership history,
+              creator reputation, and market demand. Limited-edition drops and
+              community engagement also boost value.
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </div>
     </div>
