@@ -32,7 +32,7 @@ const Header = () => {
       className={cn(
         "fixed top-0 right-0 left-0 z-[1000] container mx-auto h-14 py-2 transition-all duration-300", // Smooth transition
         isScrolled
-          ? "bg-background/80 shadow-lg backdrop-blur-lg" // Blurred effect when scrolled
+          ? "bg-background/80 shadow-lg backdrop-blur-xl" // Blurred effect when scrolled
           : "bg-background",
       )}
     >
