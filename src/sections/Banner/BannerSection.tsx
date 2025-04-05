@@ -4,7 +4,11 @@ import Image from "next/image";
 const BannerSection = () => {
   return (
     <div className={"container mx-auto my-10"}>
-      <div className={"w-full rounded-r-full bg-green-400 p-5"}>
+      <div
+        className={
+          "flex w-full items-center gap-10 rounded-r-full bg-green-400 p-5"
+        }
+      >
         <div className={"flex w-1/2 flex-col gap-4"}>
           <h1
             className={
