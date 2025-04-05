@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "../../components/ui/button";
 import Link from "next/link";
 import { AtomIcon } from "lucide-react";
+import DotLine from "../../components/DotLine";
 
 const SecondHeroSection = () => {
   return (
@@ -17,6 +18,7 @@ const SecondHeroSection = () => {
           "col-span-3 flex h-full w-full flex-col gap-10 px-2 py-5 lg:col-span-2 lg:px-5 lg:py-5"
         }
       >
+        <DotLine length={20} />
         <h1 className={"text-4xl font-extrabold text-pretty lg:text-[80px]"}>
           Game Changers for Online Investment Strategy Of NFTs
         </h1>
