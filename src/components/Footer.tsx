@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -19,14 +20,17 @@ const Footer = () => {
         >
           {/* Logo Section */}
           <div className="space-y-4">
-            <h1
-              className={cn(
-                "text-2xl font-bold text-emerald-400",
-                "tracking-wider",
-              )}
-            >
-              NFT Galaxy
-            </h1>
+            <div className={"flex items-center gap-3"}>
+              <Image src={"/logo.png"} alt={"logo"} width={50} height={50} />
+              <h1
+                className={cn(
+                  "text-2xl font-bold text-emerald-400",
+                  "tracking-wider",
+                )}
+              >
+                Mint Mart
+              </h1>
+            </div>
             <p className={cn("text-gray-400", "text-sm")}>
               &copy; {new Date().getFullYear()} All rights reserved.
             </p>
@@ -206,7 +210,7 @@ const Footer = () => {
           )}
         >
           <p className="mb-2 md:mb-0">
-            &copy; {new Date().getFullYear()} NFT Galaxy. All rights reserved.
+            &copy; {new Date().getFullYear()} Mint Mart. All rights reserved.
           </p>
           <div className="flex space-x-4">
             <a
