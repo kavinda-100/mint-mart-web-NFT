@@ -3,8 +3,7 @@ import MainHeroSection from "../../sections/hero/MainHeroSection";
 import SecondHeroSection from "../../sections/hero/SecondHeroSection";
 import FaqSection from "../../sections/FAQ/FAQSection";
 import BannerSection from "../../sections/Banner/BannerSection";
-import SmokeCursor from "../../components/animations/SmokeCursor";
-import SplashCursor from "../../components/animations/SplashCursor.jsx";
+import SplashCursor from "../../components/animations/SplashCursor";
 
 export default function HomePage() {
   return (
